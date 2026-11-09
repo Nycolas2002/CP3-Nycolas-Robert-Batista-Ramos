@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de contato de Nycolas Robert">
+    <title>Contato | Nycolas Robert</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="container">
+            <h1>Nycolas Robert</h1>
+
+            <nav class="navegacao" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="curriculo.html">Currículo</a></li>
+                    <li><a href="formulario.html" class="ativo">Contato</a></li>
+                    <li><a href="multimidia.html">Multimídia</a></li>
+                    <li><a href="graficos.html">Gráficos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="pagina-topo">
+            <div class="container">
+                <p class="destaque">Entre em contato</p>
+                <h2>Formulário de contato</h2>
+                <p>
+                    Preencha os campos abaixo para enviar uma mensagem.
+                </p>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="container">
+
+                <form class="formulario" action="#" method="post">
+
+                    <fieldset>
+                        <legend>Informações pessoais</legend>
+
+                        <div class="campo">
+                            <label for="nome">Nome completo:</label>
+                            <input
+                                type="text"
+                                id="nome"
+                                name="nome"
+                                placeholder="Digite seu nome"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="email">E-mail:</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="exemplo@email.com"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="telefone">Telefone:</label>
+                            <input
+                                type="tel"
+                                id="telefone"
+                                name="telefone"
+                                placeholder="(11) 99999-9999"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="data">Data de contato:</label>
+                            <input
+                                type="date"
+                                id="data"
+                                name="data"
+                                required
+                            >
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Mensagem</legend>
+
+                        <div class="campo">
+                            <label for="assunto">Assunto:</label>
+                            <select id="assunto" name="assunto" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="duvida">Dúvida</option>
+                                <option value="proposta">Proposta profissional</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="mensagem">Mensagem:</label>
+                            <textarea
+                                id="mensagem"
+                                name="mensagem"
+                                rows="6"
+                                placeholder="Digite sua mensagem..."
+                                required
+                            ></textarea>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Preferências</legend>
+
+                        <p class="label-grupo">
+                            Como prefere receber uma resposta?
+                        </p>
+
+                        <div class="opcoes">
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="preferencia"
+                                    value="email"
+                                    required
+                                >
+                                E-mail
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="preferencia"
+                                    value="telefone"
+                                >
+                                Telefone
+                            </label>
+                        </div>
+
+                        <label class="checkbox">
+                            <input
+                                type="checkbox"
+                                name="aceite"
+                                value="sim"
+                                required
+                            >
+                            Aceito receber retorno sobre esta mensagem.
+                        </label>
+
+                    </fieldset>
+
+                    <div class="acoes-formulario">
+                        <button type="submit" class="botao">
+                            Enviar mensagem
+                        </button>
+
+                        <button type="reset" class="botao botao-secundario">
+                            Limpar formulário
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; 2026 Nycolas Robert Batista Ramos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

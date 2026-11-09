@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conteúdos multimídia do portfólio de Nycolas Robert">
+    <title>Multimídia | Nycolas Robert</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="container">
+            <h1>Nycolas Robert</h1>
+
+            <nav class="navegacao" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="curriculo.html">Currículo</a></li>
+                    <li><a href="formulario.html">Contato</a></li>
+                    <li><a href="multimidia.html" class="ativo">Multimídia</a></li>
+                    <li><a href="graficos.html">Gráficos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="pagina-topo">
+            <div class="container">
+                <p class="destaque">Conteúdo interativo</p>
+                <h2>Multimídia</h2>
+                <p>
+                    Exemplos de recursos multimídia incorporados ao meu portfólio.
+                </p>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="container grade-multimidia">
+
+                <article class="card">
+                    <h2 class="subtitulo">Áudio de apresentação</h2>
+
+                    <p>
+                        Este espaço pode ser utilizado para uma breve
+                        apresentação pessoal em áudio.
+                    </p>
+
+                    <audio controls preload="metadata">
+                        <source src="media/apresentacao.mp3" type="audio/mpeg">
+                        Seu navegador não conseguiu carregar o áudio.
+                    </audio>
+
+                    <p class="observacao">
+                        Apenas um som de exemplo com um tom classico de apresentação.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h2 class="subtitulo">Localização</h2>
+
+                    <p>
+                        Mapa incorporado utilizando um iframe.
+                    </p>
+
+                    <div class="iframe-container">
+                        <iframe
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=-46.32%2C-23.55%2C-46.28%2C-23.52&amp;layer=mapnik"
+                            title="Mapa de localização"
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; 2026 Nycolas Robert Batista Ramos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gráficos e desenhos do portfólio de Nycolas Robert">
+    <title>Gráficos | Nycolas Robert</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="container">
+            <h1>Nycolas Robert</h1>
+
+            <nav class="navegacao" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="curriculo.html">Currículo</a></li>
+                    <li><a href="formulario.html">Contato</a></li>
+                    <li><a href="multimidia.html">Multimídia</a></li>
+                    <li><a href="graficos.html" class="ativo">Gráficos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="pagina-topo">
+            <div class="container">
+                <p class="destaque">Representação visual</p>
+                <h2>Gráficos e desenhos</h2>
+                <p>
+                    Recursos gráficos desenvolvidos com HTML, CSS e JavaScript.
+                </p>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="container grade-graficos">
+
+                <article class="card">
+                    <h2 class="subtitulo">Canvas: gráfico de habilidades</h2>
+
+                    <canvas
+                        id="graficoHabilidades"
+                        width="600"
+                        height="350">
+                        Seu navegador não suporta o elemento canvas.
+                    </canvas>
+
+                    <p class="observacao">
+                        O desenho acima é criado dinamicamente com JavaScript.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h2 class="subtitulo">SVG estilizado</h2>
+
+                    <svg
+                        class="svg-tecnologia"
+                        viewBox="0 0 300 220"
+                        role="img"
+                        aria-label="Ilustração vetorial de um monitor de computador">
+
+                        <rect
+                            class="svg-monitor"
+                            x="35"
+                            y="30"
+                            width="230"
+                            height="140"
+                            rx="10">
+                        </rect>
+
+                        <rect
+                            class="svg-tela"
+                            x="50"
+                            y="45"
+                            width="200"
+                            height="110"
+                            rx="5">
+                        </rect>
+
+                        <circle
+                            class="svg-circulo"
+                            cx="150"
+                            cy="100"
+                            r="28">
+                        </circle>
+
+                        <path
+                            class="svg-linha"
+                            d="M140 100 L148 108 L163 90">
+                        </path>
+
+                        <rect
+                            class="svg-base"
+                            x="125"
+                            y="170"
+                            width="50"
+                            height="12">
+                        </rect>
+
+                        <rect
+                            class="svg-pe"
+                            x="105"
+                            y="182"
+                            width="90"
+                            height="8"
+                            rx="4">
+                        </rect>
+
+                    </svg>
+
+                    <p class="observacao">
+                        Este SVG representa tecnologia e desenvolvimento.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; 2026 Nycolas Robert Batista Ramos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const canvas = document.getElementById("graficoHabilidades");
+        const contexto = canvas.getContext("2d");
+
+        const habilidades = [
+            { nome: "Python", valor: 70 },
+            { nome: "HTML", valor: 85 },
+            { nome: "CSS", valor: 65 },
+            { nome: "SQL", valor: 75 }
+        ];
+
+        contexto.font = "16px Arial";
+        contexto.fillStyle = "#f8fafc";
+
+        habilidades.forEach((habilidade, indice) => {
+            const y = 45 + indice * 65;
+            const largura = habilidade.valor * 4;
+
+            contexto.fillStyle = "#38bdf8";
+            contexto.fillRect(130, y, largura, 30);
+
+            contexto.fillStyle = "#f8fafc";
+            contexto.fillText(habilidade.nome, 20, y + 21);
+
+            contexto.fillText(
+                habilidade.valor + "%",
+                145 + largura,
+                y + 21
+            );
+        });
+    </script>
+
+</body>
+</html>
