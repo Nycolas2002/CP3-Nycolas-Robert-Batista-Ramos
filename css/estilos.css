@@ -613,3 +613,48 @@ canvas {
         padding: 30px;
     }
 }
+
+
+/* ==============================
+   CP3: TEMA PERSISTENTE E FEEDBACK
+================================= */
+body[data-tema="claro"] {
+    --cor-fundo: #f1f5f9;
+    --cor-superficie: #ffffff;
+    --cor-destaque: #0369a1;
+    --cor-texto: #172033;
+    --cor-texto-secundario: #475569;
+    --cor-borda: #cbd5e1;
+}
+.botao-tema {
+    align-self: center;
+    min-height: 44px;
+    padding: 8px 14px;
+    border: 1px solid var(--cor-destaque);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--cor-texto);
+    font-weight: 700;
+    cursor: pointer;
+}
+.botao-tema:hover, .botao-tema:focus-visible {
+    background: rgba(56, 189, 248, 0.12);
+}
+.mensagem-formulario {
+    min-height: 1.5em;
+    margin-top: 16px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: var(--cor-texto);
+}
+.mensagem-formulario.sucesso {
+    background: rgba(22, 163, 74, 0.15);
+    border: 1px solid #16a34a;
+}
+.mensagem-formulario.erro {
+    background: rgba(220, 38, 38, 0.12);
+    border: 1px solid #dc2626;
+}
+@media (min-width: 768px) {
+    .botao-tema { align-self: center; }
+}
