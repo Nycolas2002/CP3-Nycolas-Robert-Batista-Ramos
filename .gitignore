@@ -1,0 +1,21 @@
+# Git
+.git/
+
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Dependências e arquivos temporários
+node_modules/
+*.tmp
+*.log
+*.bak
+~$*
+
+# Saídas locais
+dist/
+build/
