@@ -222,15 +222,24 @@ video {
 .pagina-topo {
     padding: 44px 0;
     background-color: var(--cor-faixa);
+    color: var(--cor-texto);
 }
 
 .pagina-topo h2 {
     font-size: clamp(2rem, 8vw, 2.8rem);
     margin-bottom: 10px;
+    color: var(--cor-texto);
 }
 
-.pagina-topo p:last-child {
-    color: var(--cor-texto-secundario);
+/* Ajustes específicos para o tema claro */
+body[data-tema="claro"] .pagina-topo {
+    background-color: #e2e8f0;
+    color: #172033;
+}
+
+body[data-tema="claro"] .pagina-topo h2,
+body[data-tema="claro"] .pagina-topo p {
+    color: #172033;
 }
 
 /* ==============================

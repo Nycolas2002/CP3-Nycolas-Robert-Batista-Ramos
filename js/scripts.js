@@ -8,10 +8,10 @@
         if (!canvas) return;
 
         const contexto = canvas.getContext("2d");
-        const estilos = getComputedStyle(document.body);
-        const corTexto = estilos.getPropertyValue("--cor-texto").trim();
-        const corDestaque = estilos.getPropertyValue("--cor-destaque").trim();
+        const temaClaro = document.body.dataset.tema === "claro";
 
+        const corTexto = temaClaro ? "#172033" : "#f8fafc";
+        const corDestaque = temaClaro ? "#0369a1" : "#38bdf8";
         contexto.clearRect(0, 0, canvas.width, canvas.height);
         contexto.font = "16px Arial";
         contexto.textBaseline = "alphabetic";
