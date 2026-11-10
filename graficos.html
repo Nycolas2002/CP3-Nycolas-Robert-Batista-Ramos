@@ -128,38 +128,6 @@
         </div>
     </footer>
 
-    <script>
-        const canvas = document.getElementById("graficoHabilidades");
-        const contexto = canvas.getContext("2d");
-
-        const habilidades = [
-            { nome: "Python", valor: 70 },
-            { nome: "HTML", valor: 85 },
-            { nome: "CSS", valor: 65 },
-            { nome: "SQL", valor: 75 }
-        ];
-
-        contexto.font = "16px Arial";
-        contexto.fillStyle = "#f8fafc";
-
-        habilidades.forEach((habilidade, indice) => {
-            const y = 45 + indice * 65;
-            const largura = habilidade.valor * 4;
-
-            contexto.fillStyle = "#38bdf8";
-            contexto.fillRect(130, y, largura, 30);
-
-            contexto.fillStyle = "#f8fafc";
-            contexto.fillText(habilidade.nome, 20, y + 21);
-
-            contexto.fillText(
-                habilidade.valor + "%",
-                145 + largura,
-                y + 21
-            );
-        });
-    </script>
-
     <script src="js/scripts.js" defer></script>
 </body>
 </html>

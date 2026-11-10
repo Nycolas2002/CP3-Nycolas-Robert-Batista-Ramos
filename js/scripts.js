@@ -3,8 +3,42 @@
     const chaveTema = "portfolio-tema";
     const botaoTema = document.getElementById("alternar-tema");
 
+    function desenharGrafico() {
+        const canvas = document.getElementById("graficoHabilidades");
+        if (!canvas) return;
+
+        const contexto = canvas.getContext("2d");
+        const estilos = getComputedStyle(document.body);
+        const corTexto = estilos.getPropertyValue("--cor-texto").trim();
+        const corDestaque = estilos.getPropertyValue("--cor-destaque").trim();
+
+        contexto.clearRect(0, 0, canvas.width, canvas.height);
+        contexto.font = "16px Arial";
+        contexto.textBaseline = "alphabetic";
+
+        const habilidades = [
+            { nome: "Python", valor: 70 },
+            { nome: "HTML", valor: 85 },
+            { nome: "CSS", valor: 65 },
+            { nome: "SQL", valor: 75 }
+        ];
+
+        habilidades.forEach((habilidade, indice) => {
+            const y = 45 + indice * 65;
+            const largura = habilidade.valor * 4;
+
+            contexto.fillStyle = corDestaque;
+            contexto.fillRect(130, y, largura, 30);
+
+            contexto.fillStyle = corTexto;
+            contexto.fillText(habilidade.nome, 20, y + 21);
+            contexto.fillText(habilidade.valor + "%", 145 + largura, y + 21);
+        });
+    }
+
     function aplicarTema(tema) {
         document.body.dataset.tema = tema;
+        desenharGrafico();
         if (botaoTema) {
             botaoTema.textContent = tema === "claro" ? "Tema escuro" : "Tema claro";
             botaoTema.setAttribute("aria-pressed", String(tema === "claro"));

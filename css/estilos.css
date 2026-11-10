@@ -16,6 +16,8 @@
     --cor-texto: #f8fafc;
     --cor-texto-secundario: #cbd5e1;
     --cor-borda: #334155;
+    --cor-faixa: #111c32;
+    --cor-cabecalho-tabela: #0f172a;
 }
 
 html {
@@ -203,7 +205,7 @@ video {
 }
 
 .secao-alternativa {
-    background-color: #111c32;
+    background-color: var(--cor-faixa);
 }
 
 .titulo-secao {
@@ -219,7 +221,7 @@ video {
 
 .pagina-topo {
     padding: 44px 0;
-    background-color: #111c32;
+    background-color: var(--cor-faixa);
 }
 
 .pagina-topo h2 {
@@ -336,7 +338,7 @@ td {
 }
 
 th {
-    background-color: #0f172a;
+    background-color: var(--cor-cabecalho-tabela);
     color: var(--cor-destaque);
 }
 
@@ -625,6 +627,8 @@ body[data-tema="claro"] {
     --cor-texto: #172033;
     --cor-texto-secundario: #475569;
     --cor-borda: #cbd5e1;
+    --cor-faixa: #e2e8f0;
+    --cor-cabecalho-tabela: #e2e8f0;
 }
 .botao-tema {
     align-self: center;
