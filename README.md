@@ -1,54 +1,57 @@
-# Portfólio Pessoal — Nycolas Robert Batista Ramos (CP3)
+# Portfólio Pessoal — CP4 | Nycolas Robert Batista Ramos
 
-## Descrição
-Portfólio acadêmico com cinco páginas interligadas: início, currículo, formulário, multimídia e gráficos. O projeto evolui o CP2 com versionamento, publicação web e interatividade em JavaScript.
+## Sobre o projeto
+Site pessoal desenvolvido ao longo dos quatro checkpoints de Desenvolvimento Front-end para Web. A versão final preserva as cinco páginas e integra responsividade, JavaScript com persistência local, Bootstrap e melhorias de acessibilidade.
 
-## Tecnologias
-- HTML5 semântico e CSS3 responsivo
-- JavaScript (DOM e eventos)
-- `localStorage` para persistir a preferência de tema
-- Canvas e SVG
+## Páginas
+- `index.html` — apresentação, foto e interesses.
+- `curriculo.html` — formação, experiência, habilidades e tabela.
+- `formulario.html` — formulário com validação nativa + feedback escrito na tela, sem envio para servidor.
+- `multimidia.html` — áudio local e mapa incorporado.
+- `graficos.html` — Canvas desenhado por JavaScript e SVG estilizado.
 
-## Estrutura
-- `index.html` — página inicial
-- `curriculo.html` — currículo
-- `formulario.html` — formulário de contato
-- `multimidia.html` — recursos multimídia
-- `graficos.html` — gráficos e desenhos
-- `css/estilos.css` — estilos externos
-- `js/scripts.js` — funcionalidades compartilhadas
-- `img/` e `media/` — arquivos de mídia
+## Evolução CP1 → CP4
+- **CP1:** HTML semântico, cinco páginas, navegação, formulário, áudio, `iframe`, Canvas, SVG e CSS externo.
+- **CP2:** CSS mobile-first, Flexbox no menu e nos cards, Grid no currículo, media queries `min-width`, imagens fluidas.
+- **CP3:** versionamento Git/GitHub, publicação planejada via GitHub Pages, JavaScript com tema persistido em `localStorage`, validação e mensagens do formulário.
+- **CP4:** Bootstrap 5.3.8 carregado via CDN, classes utilitárias no HTML, foco visível, link para pular ao conteúdo, melhoria de descrições e layout do cabeçalho.
 
-## Feature com localStorage: tema claro/escuro
-O botão **Tema claro/Tema escuro** aparece em todas as páginas. Ao alternar, a escolha é gravada no navegador com a chave `portfolio-tema` e o valor `claro` ou `escuro`. Ao abrir outra página ou recarregar o site, o JavaScript recupera a preferência e aplica o mesmo tema.
+## Bootstrap no CP4
+O CSS do Bootstrap 5.3.8 é carregado **antes** de `css/estilos.css`, para preservar as cores e o visual já construídos. Exemplos de classes aplicadas:
+- `rounded-3` — cantos arredondados dos cards nas páginas.
+- `gap-3` — espaçamento entre cards e entre botões.
+- `d-flex` e `flex-wrap` — alinhamento e quebra dos botões no formulário.
+- `img-fluid` — foto da página inicial adaptável.
+- `table-responsive` — tabela do currículo com rolagem horizontal dentro do seu próprio contêiner.
 
-### Como testar
-1. Abra qualquer página do site em um navegador.
-2. Clique em **Tema claro** para alternar para o tema claro.
-3. Recarregue a página e navegue entre as cinco páginas: a preferência deve continuar aplicada.
-4. Abra DevTools (F12) → **Application** → **Local Storage** → domínio do site.
-5. Confira a chave `portfolio-tema` e seu valor (`claro` ou `escuro`).
+## JavaScript: como demonstrar a persistência
+1. Abra o site **publicado**.
+2. Clique em **Tema claro** ou **Tema escuro** no cabeçalho.
+3. Abra `F12` → **Application** → **Local Storage** → endereço do site.
+4. Veja a chave `portfolio-tema`, com valor `claro` ou `escuro`.
+5. Atualize com `F5` e navegue para outra página: o tema continua igual.
 
-### Campos persistidos
-- Chave: `portfolio-tema`
-- Valor: `claro` ou `escuro`
+**Observação:** esse dado fica salvo no navegador do visitante. A navegação anônima usa um armazenamento separado.
 
-Nenhum dado pessoal do formulário é armazenado no `localStorage`. O formulário valida os campos e apresenta feedback visível; como o projeto não possui backend, a mensagem informa que a validação ocorreu, mas não simula envio real.
+## Validação do formulário
+Os campos possuem `required`, tipos apropriados e rótulos. O JavaScript utiliza `checkValidity()` e `reportValidity()` e exibe um feedback na página para erros e preenchimento correto. Nenhuma mensagem é enviada para um servidor e nenhum dado pessoal do formulário é persistido.
 
-## Formulário
-O formulário utiliza validação dos campos obrigatórios e do formato de e-mail pelo navegador. O JavaScript exibe feedback de sucesso ou orientação de correção diretamente na página.
+## Acessibilidade
+- `alt` informativo na foto, `title` no `iframe`, descrição no Canvas e nome acessível no SVG.
+- Contraste entre texto e fundo definido pelas variáveis CSS para temas claro e escuro.
+- Navegação pelo teclado, estados `:focus-visible` e link **Pular para o conteúdo principal**.
+- Área mínima de 44px para os principais controles.
+- Animações reduzidas para quem solicita menos movimento.
 
-## Versionamento e publicação
-O repositório deve ser publicado no GitHub e o site pode ser implantado pelo GitHub Pages, Netlify ou Vercel. Configure HTTPS e teste as cinco páginas em uma janela anônima.
+## Publicação e entrega
+1. Abra esta pasta em um repositório Git e garanta que a branch usada pelo GitHub Pages contém os arquivos.
+2. Faça o commit/push da versão final **antes** de criar a tag.
+3. Crie a tag `cp4-entrega` no commit final e envie-a ao GitHub.
+4. Confira a aba **Settings → Pages** e publique a branch correta na pasta `/ (root)`.
+5. Abra a URL publicada usando HTTPS em janela anônima e teste as cinco páginas.
+6. Grave o vídeo obrigatório de **1min30s a 2min30s** mostrando o site no endereço público, a feature persistente e a evolução CP1→CP4.
 
-### Sugestão de histórico de commits
-Faça commits por etapa, com mensagens descritivas, por exemplo:
-- `Atualizar estrutura e identificação do projeto para CP3`
-- `Adicionar alternância de tema persistida no localStorage`
-- `Adicionar validação e feedback ao formulário`
-- `Documentar feature e instruções de publicação`
+Há um passo a passo em `GUIA_ENTREGA_CP4.md` e um roteiro cronometrado em `ROTEIRO_VIDEO_CP4.md`.
 
-Antes da entrega, crie a tag `cp3-entrega` e envie commits e tag ao GitHub. Não inclua a pasta `.git` no ZIP de entrega.
-
-## Autor
-Nycolas Robert Batista Ramos
+## Autor do código original
+Nycolas Robert Batista Ramos. Revise a identificação pessoal do site e dos arquivos para garantir que corresponde ao aluno que entregará o trabalho.

@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfólio pessoal de Nycolas Robert Batista Ramos">
     <title>Início | Nycolas Robert</title>
+    <!-- Bootstrap 5.3.8: classes utilitárias, CSS local prevalece no visual -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+    <a class="link-pular" href="#conteudo-principal">Pular para o conteúdo principal</a>
 
     <header class="cabecalho">
         <div class="container">
             <h1>Nycolas Robert</h1>
-            <button type="button" class="botao-tema" id="alternar-tema" aria-label="Alternar tema claro e escuro">Tema claro</button>
+            <button type="button" class="botao-tema" id="alternar-tema">Tema claro</button>
 
             <nav class="navegacao" aria-label="Navegação principal">
                 <ul>
-                    <li><a href="index.html" class="ativo">Início</a></li>
+                    <li><a href="index.html" class="ativo" aria-current="page">Início</a></li>
                     <li><a href="curriculo.html">Currículo</a></li>
                     <li><a href="formulario.html">Contato</a></li>
                     <li><a href="multimidia.html">Multimídia</a></li>
@@ -26,7 +29,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="conteudo-principal">
         <section class="hero">
             <div class="container hero-conteudo">
 
@@ -50,7 +53,7 @@
                     <img
                         src="img/minhafoto.png"
                         alt="Foto de Nycolas Robert Batista Ramos"
-                        class="foto-perfil"
+                        class="foto-perfil img-fluid"
                     >
                 </div>
 
@@ -90,9 +93,9 @@
 
                 <h2 class="titulo-secao">Meus interesses</h2>
 
-                <div class="grade-cards">
+                <div class="grade-cards gap-3">
 
-                    <article class="card">
+                    <article class="card rounded-3">
                         <span class="icone">💻</span>
                         <h3>Tecnologia</h3>
                         <p>
@@ -101,7 +104,7 @@
                         </p>
                     </article>
 
-                    <article class="card">
+                    <article class="card rounded-3">
                         <span class="icone">🐍</span>
                         <h3>Python</h3>
                         <p>
@@ -110,7 +113,7 @@
                         </p>
                     </article>
 
-                    <article class="card">
+                    <article class="card rounded-3">
                         <span class="icone">🗄️</span>
                         <h3>Banco de Dados</h3>
                         <p>
@@ -118,7 +121,7 @@
                         </p>
                     </article>
 
-                    <article class="card">
+                    <article class="card rounded-3">
                         <span class="icone">📊</span>
                         <h3>Dados</h3>
                         <p>

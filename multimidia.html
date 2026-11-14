@@ -5,28 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conteúdos multimídia do portfólio de Nycolas Robert">
     <title>Multimídia | Nycolas Robert</title>
+    <!-- Bootstrap 5.3.8: classes utilitárias, CSS local prevalece no visual -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+    <a class="link-pular" href="#conteudo-principal">Pular para o conteúdo principal</a>
 
     <header class="cabecalho">
         <div class="container">
             <h1>Nycolas Robert</h1>
-            <button type="button" class="botao-tema" id="alternar-tema" aria-label="Alternar tema claro e escuro">Tema claro</button>
+            <button type="button" class="botao-tema" id="alternar-tema">Tema claro</button>
 
             <nav class="navegacao" aria-label="Navegação principal">
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="curriculo.html">Currículo</a></li>
                     <li><a href="formulario.html">Contato</a></li>
-                    <li><a href="multimidia.html" class="ativo">Multimídia</a></li>
+                    <li><a href="multimidia.html" class="ativo" aria-current="page">Multimídia</a></li>
                     <li><a href="graficos.html">Gráficos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main id="conteudo-principal">
         <section class="pagina-topo">
             <div class="container">
                 <p class="destaque">Conteúdo interativo</p>
@@ -40,7 +43,7 @@
         <section class="secao">
             <div class="container grade-multimidia">
 
-                <article class="card">
+                <article class="card rounded-3">
                     <h2 class="subtitulo">Áudio de apresentação</h2>
 
                     <p>
@@ -58,7 +61,7 @@
                     </p>
                 </article>
 
-                <article class="card">
+                <article class="card rounded-3">
                     <h2 class="subtitulo">Localização</h2>
 
                     <p>

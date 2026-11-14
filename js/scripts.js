@@ -1,4 +1,4 @@
-// CP3 - Funcionalidades compartilhadas do portfólio
+// CP3/CP4 - Funcionalidades compartilhadas do portfólio
 (() => {
     const chaveTema = "portfolio-tema";
     const botaoTema = document.getElementById("alternar-tema");
@@ -41,7 +41,6 @@
         desenharGrafico();
         if (botaoTema) {
             botaoTema.textContent = tema === "claro" ? "Tema escuro" : "Tema claro";
-            botaoTema.setAttribute("aria-pressed", String(tema === "claro"));
         }
     }
 
@@ -75,9 +74,10 @@
                 formulario.reportValidity();
                 return;
             }
+            // Limpa os campos primeiro: o evento reset também limpa o feedback.
+            formulario.reset();
             feedback.textContent = "Formulário validado com sucesso! Esta demonstração não envia a mensagem para um servidor.";
             feedback.classList.add("sucesso");
-            formulario.reset();
         });
         formulario.addEventListener("reset", () => {
             if (feedback) {

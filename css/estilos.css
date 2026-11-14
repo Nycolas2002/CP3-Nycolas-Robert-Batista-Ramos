@@ -247,6 +247,7 @@ body[data-tema="claro"] .pagina-topo p {
 ================================= */
 
 .card {
+    color: var(--cor-texto); /* Bootstrap: texto legível no tema escuro */
     min-width: 0;
     background-color: var(--cor-superficie);
     border: 1px solid var(--cor-borda);
@@ -670,4 +671,58 @@ body[data-tema="claro"] {
 }
 @media (min-width: 768px) {
     .botao-tema { align-self: center; }
+}
+
+
+/* =========================================
+   CP4 — ajustes finais de acessibilidade
+   ========================================= */
+
+/* O link aparece ao navegar com Tab, antes do menu. */
+.link-pular {
+    position: absolute;
+    left: 12px;
+    top: -90px;
+    z-index: 1000;
+    display: inline-block;
+    padding: 12px 18px;
+    background: var(--cor-destaque);
+    color: var(--cor-fundo);
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.link-pular:focus-visible {
+    top: 12px;
+}
+
+/* O foco fica fácil de encontrar mesmo sem mouse. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 3px;
+}
+
+/* Evita que menus apertem uns aos outros em telas intermediárias. */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .cabecalho .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cabecalho h1 {
+        text-align: center;
+    }
+    .navegacao ul {
+        justify-content: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
 }
